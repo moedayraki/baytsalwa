@@ -1,0 +1,64 @@
+<script setup></script>
+
+<template>
+  <div class="background h-screen">
+    <router-link to="/book">
+      <div
+        class="w-full h-1/4 border-b-2 border-baytLightGreen text-baytLightGreen text-2xl relative"
+      >
+        <div
+          class="border-b-2 border-baytLightGreen px-2 absolute w-fit left-1/4 bottom-4 tracking-widest first-letter:text-4xl"
+        >
+          LET'S BOOK
+        </div>
+      </div>
+    </router-link>
+    <div class="flex h-3/4">
+      <router-link to="/about" class="w-2/5">
+        <div
+          class="text-right h-full border-r-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
+        >
+          <div
+            class="border-r-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 right-4 tracking-widest first-letter:text-4xl"
+          >
+            BAYT SALWA
+          </div>
+        </div>
+      </router-link>
+      <div class="w-3/5">
+        <router-link to="/gallery" class="">
+          <div
+            class="h-1/3 border-b-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
+          >
+            <div
+              class="border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/3 left-4 tracking-widest first-letter:text-4xl"
+            >
+              GAL<br />LERY
+            </div>
+          </div>
+        </router-link>
+        <router-link to="/contact" class="">
+          <div class="h-2/3 pl-4 pt-2 text-baytLightGreen text-2xl relative">
+            <div
+              class="border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/2 left-4 tracking-widest first-letter:text-4xl"
+            >
+              REACH<br />US
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped>
+.background {
+  background-image: radial-gradient(
+      50% 103%,
+      rgba(25, 40, 43, 0.74) 50%,
+      rgba(0, 0, 0, 0.87) 100%
+    ),
+    url("./../images/home.jpg");
+  background-size: cover;
+  background-position: center;
+}
+</style>
