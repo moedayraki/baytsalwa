@@ -193,7 +193,7 @@ export default {
     DialogTitle,
   },
   setup() {
-    const isOpen = ref(true);
+    const isOpen = ref(false);
 
     return {
       isOpen,
