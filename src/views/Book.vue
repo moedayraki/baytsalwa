@@ -174,6 +174,7 @@
 
 <script>
 import { DatePicker } from "v-calendar";
+import "v-calendar/dist/style.css";
 import { ref } from "vue";
 import {
   TransitionRoot,
