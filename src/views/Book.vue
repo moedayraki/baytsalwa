@@ -16,16 +16,34 @@
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
       <input
-        type="email"
-        name="floating_email"
+        type="text"
+        name="checkin"
         class="block py-2.5 px-0 w-full text-sm text-baytBeige bg-transparent border-0 border-b-2 border-baytBeige appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
         placeholder=" "
         required
+        readonly
+        :value="checkIn"
       />
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >Booking Date</label
+        >Check In</label
+      >
+    </div>
+    <div class="relative z-0 mb-6 mx-10 group">
+      <input
+        type="text"
+        name="checkout"
+        class="block py-2.5 px-0 w-full text-sm text-baytBeige bg-transparent border-0 border-b-2 border-baytBeige appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
+        placeholder=" "
+        required
+        readonly
+        :value="checkOut"
+      />
+      <label
+        for="floating_email"
+        class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+        >Check Out</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -82,10 +100,7 @@
         id="user_avatar"
         type="file"
       />
-      <div
-        class="mt-1 text-xs text-gray-500 dark:text-gray-300"
-        id="user_avatar_help"
-      >
+      <div class="mt-1 text-xs text-baytLightGreen" id="user_avatar_help">
         A proof of ID is useful to confirm legal information.
       </div>
     </div>
@@ -158,10 +173,17 @@
               <div class="mt-4">
                 <button
                   type="button"
-                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 mr-4"
                   @click="closeModal"
                 >
-                  I, Moe Dayraki , Agree to the Terms
+                  Agree
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                  @click="closeModal"
+                >
+                  Disagree
                 </button>
               </div>
             </div>
@@ -174,6 +196,7 @@
 
 <script>
 import { DatePicker } from "v-calendar";
+import dayjs from "dayjs";
 import "v-calendar/dist/style.css";
 import { ref } from "vue";
 import {
@@ -238,11 +261,43 @@ export default {
           dates: new Date(year, month, 12),
         },
       ],
+      range: {
+        start: null,
+        end: null,
+      },
     };
+  },
+  computed: {
+    checkIn() {
+      if (this.range.start === null) return "";
+      let d = new Date(
+        this.range.start.getFullYear(),
+        this.range.start.getMonth(),
+        this.range.start.getDate(),
+        14,
+        0,
+        0,
+        0
+      );
+      return `${dayjs(d).format("ddd MMM DD, YYYY")} @ 4:00 PM`;
+    },
+    checkOut() {
+      if (this.range.end === null) return "";
+      let d = new Date(
+        this.range.end.getFullYear(),
+        this.range.end.getMonth(),
+        this.range.end.getDate(),
+        14,
+        0,
+        0,
+        0
+      );
+      return `${dayjs(d).format("ddd MMM DD, YYYY")} @ 2:00 PM`;
+    },
   },
 };
 </script>
-<style>
+<style scoped>
 .background {
   background-image: radial-gradient(
       58% 108%,
@@ -253,6 +308,8 @@ export default {
   background-size: cover;
   background-position: center;
 }
+</style>
+<style>
 .vc-container {
   background-color: #ffffff66 !important;
 }

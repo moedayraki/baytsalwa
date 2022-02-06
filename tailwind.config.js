@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['gulim', ...defaultTheme.fontFamily.sans],
+        'brush': ['comforter-brush', ...defaultTheme.fontFamily.sans],
+        'bradhitc': ['bradhitc', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         baytLightGreen: '#DFE9DE',

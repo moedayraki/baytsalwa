@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-2 left-0 text-white w-full">
+  <div class="fixed top-2 left-0 text-white w-screen z-10">
     <router-link to="/" class="inline-block w-1/3 text-center text-xs"
       >Back</router-link
     >

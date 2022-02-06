@@ -6,3 +6,14 @@
   font-family: "gulim";
   src: local("gulim"), url(./fonts/gulim.ttf) format("ttf");
 }
+
+@font-face {
+  font-family: "comforter-brush";
+  src: local("ComforterBrush-Regular"),
+    url(./fonts/ComforterBrush-Regular.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "bradhitc";
+  src: local("bradhitc"), url(./fonts/bradhitc.ttf) format("ttf");
+}
