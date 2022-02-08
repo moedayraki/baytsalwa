@@ -11,27 +11,27 @@
       class="absolute w-screen h-full opacity-30 -scale-y-100"
     />
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-3xl bg-baytBeige w-1/2 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-1/2 relative pt-1 px-2 mt-2"
     >
       <a href="#the-name">❁ The Name</a>
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-3xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
     >
       <a href="#the-built">❃ How Was it Built?</a>
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-3xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
     >
       <a href="#the-activities">❊ Activities, Hikes, & Adventures</a>
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-3xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
     >
       <a href="#the-things">ꕤ Things We Have In-House</a>
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-3xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
     >
       <a href="#the-visit">✤ Plant Your Visit</a>
     </h2>
