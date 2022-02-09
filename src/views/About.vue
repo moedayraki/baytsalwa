@@ -105,7 +105,7 @@
       </ul>
       <button
         id="the-visit"
-        class="scroll-mt-10 w-1/2 left-1/4 bg-baytLightGreen text-baytDarkestGreen tracking-wider border-2 border-baytDarkestGreen relative p-4 my-10 shadow-lg shadow-baytDarkestGreen"
+        class="scroll-mt-10 w-1/2 left-1/4 bg-baytLightGreen text-baytDarkestGreen tracking-wider border-2 border-baytDarkestGreen relative p-4 mt-10 mb-40 shadow-lg shadow-baytDarkestGreen"
       >
         PLAN YOUR VISIT
       </button>
