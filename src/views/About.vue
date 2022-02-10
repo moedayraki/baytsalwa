@@ -11,31 +11,39 @@
       class="absolute w-screen h-full opacity-30 -scale-y-100"
     />
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-1/2 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl px-2 mt-4"
     >
-      <a href="#the-name">❁ The Name</a>
+      <a href="#the-name" class="bg-baytBeige p-2 rounded-md">❁ The Name</a>
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl pt-1 px-2 mt-4"
     >
-      <a href="#the-built">❃ How Was it Built?</a>
+      <a href="#the-built" class="bg-baytBeige p-2 rounded-md"
+        >❃ How Was it Built?</a
+      >
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-activities">❊ Activities, Hikes, & Adventures</a>
+      <a href="#the-activities" class="bg-baytBeige p-2 rounded-md"
+        >❊ Activities, Hikes, & Adventures</a
+      >
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-screen relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-things">ꕤ Things We Have In-House</a>
+      <a href="#the-things" class="bg-baytBeige p-2 rounded-md"
+        >ꕤ Things We Have In-House</a
+      >
     </h2>
     <h2
-      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl bg-baytBeige w-2/3 relative pt-1 px-2 mt-2"
+      class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-visit">✤ Plant Your Visit</a>
+      <a href="#the-visit" class="bg-baytBeige p-2 rounded-md"
+        >✤ Plant Your Visit</a
+      >
     </h2>
-    <div class="bg-baytDarkestGreen pt-6 mt-20">
+    <div class="bg-baytDarkestGreen pt-6 mt-4">
       <h2
         id="the-name"
         class="scroll-mt-10 font-brush text-baytBeige tracking-wider text-4xl w-screen relative"
@@ -76,7 +84,7 @@
       </p>
       <button
         id="the-activities"
-        class="scroll-mt-10 left-[10%] bg-baytDarkestGreen text-baytBeige tracking-wider relative p-4 my-10 border-2 border-baytLightGreen shadow-lg shadow-baytLightGreen"
+        class="ml-10 scroll-mt-10 bg-baytDarkestGreen text-baytBeige tracking-wider relative p-4 my-10 border-2 border-baytLightGreen shadow-lg shadow-baytLightGreen rounded-md"
       >
         ACTIVITES, HIKES & ADVENTRUES
       </button>
@@ -105,7 +113,7 @@
       </ul>
       <button
         id="the-visit"
-        class="scroll-mt-10 w-1/2 left-1/4 bg-baytLightGreen text-baytDarkestGreen tracking-wider border-2 border-baytDarkestGreen relative p-4 mt-10 mb-40 shadow-lg shadow-baytDarkestGreen"
+        class="rounded-md scroll-mt-10 w-1/2 left-1/4 bg-baytLightGreen text-baytDarkestGreen tracking-wider border-2 border-baytDarkestGreen relative p-4 mt-10 mb-40 shadow-lg shadow-baytDarkestGreen"
       >
         PLAN YOUR VISIT
       </button>

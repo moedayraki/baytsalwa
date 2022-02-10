@@ -1,6 +1,8 @@
 <template>
   <div class="bg-baytBeige h-full w-screen">
-    <div class="grid grid-cols-2 gap-4 pt-10 px-6 max-w-screen-2xl h-full">
+    <div
+      class="grid grid-cols-2 gap-1 pt-10 px-6 max-w-screen-2xl h-full place-content-stretch"
+    >
       <div
         v-for="img in gridArray()"
         :key="img.id"
@@ -11,7 +13,7 @@
           :src="img.src"
           :key="img.id"
           alt=""
-          class="object-cover rounded-3xl"
+          class="object-cover rounded-md"
         />
       </div>
     </div>
