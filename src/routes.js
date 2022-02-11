@@ -4,6 +4,8 @@ import Book from './views/Book.vue'
 import Contact from './views/Contact.vue'
 import Gallery from './views/Gallery.vue'
 import NotFound from './views/NotFound.vue'
+import Activities from './views/Activities.vue'
+import Visit from './views/Visit.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -27,6 +29,16 @@ export const routes = [
     path: '/contact',
     meta: { title: 'Reach Us' },
     component: Contact,
+  },
+  {
+    path: '/activities',
+    meta: { title: 'Activities' },
+    component: Activities,
+  },
+  {
+    path: '/visit',
+    meta: { title: 'Visit Us' },
+    component: Visit,
   },
   { path: '/:path(.*)', component: NotFound },
 ]

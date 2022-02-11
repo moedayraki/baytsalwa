@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "gulim";
-  src: local("gulim"), url(./fonts/gulim.ttf) format("ttf");
-}
+@layer base {
+  @font-face {
+    font-family: "gulim";
+    src: local("gulim"), url(./fonts/gulim.ttf) format("truetype");
+  }
 
-@font-face {
-  font-family: "comforter-brush";
-  src: local("ComforterBrush-Regular"),
-    url(./fonts/ComforterBrush-Regular.ttf) format("ttf");
-}
+  @font-face {
+    font-family: "comforter-brush";
+    src: local("ComforterBrush-Regular"),
+      url(./fonts/ComforterBrush-Regular.ttf) format("truetype");
+  }
 
-@font-face {
-  font-family: "bradhitc";
-  src: local("bradhitc"), url(./fonts/bradhitc.ttf) format("ttf");
+  @font-face {
+    font-family: "bradhitc";
+    src: local("bradhitc"), url(./fonts/bradhitc.ttf) format("truetype");
+  }
 }
