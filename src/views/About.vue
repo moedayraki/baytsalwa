@@ -85,6 +85,7 @@
       <button
         id="the-activities"
         class="ml-10 scroll-mt-10 bg-baytDarkestGreen text-baytBeige tracking-wider relative p-4 my-10 border-2 border-baytLightGreen shadow-lg shadow-baytLightGreen rounded-md"
+        @click="$router.push('/activities')"
       >
         ACTIVITES, HIKES & ADVENTRUES
       </button>
@@ -114,6 +115,7 @@
       <button
         id="the-visit"
         class="rounded-md scroll-mt-10 w-1/2 left-1/4 bg-baytLightGreen text-baytDarkestGreen tracking-wider border-2 border-baytDarkestGreen relative p-4 mt-10 mb-40 shadow-lg shadow-baytDarkestGreen"
+        @click="$router.push('/visit')"
       >
         PLAN YOUR VISIT
       </button>
