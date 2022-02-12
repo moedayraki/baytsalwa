@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="sm:container sm:mx-auto">
+  <div class="max-w-[450px] mx-auto">
     <main>
       <nav-bar />
       <router-view />

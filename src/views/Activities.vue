@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-baytLightGreen absolute">
+  <div class="bg-baytLightGreen absolute max-w-[450px]">
     <div class="relative slide mt-10">
       <div class="carousel-inner relative overflow-hidden w-full">
         <div
@@ -43,7 +43,9 @@
         </div>
       </div>
     </div>
-    <div class="fixed flex items-stretch bottom-0 w-full justify-between">
+    <div
+      class="fixed flex items-stretch bottom-0 w-full justify-between max-w-[450px]"
+    >
       <div
         class="text-4xl bg-baytDarkestGreen text-left py-2 px-6 m-4 rounded-md shadow-lg shadow-black border border-black text-baytLightGreen"
         @click="swipeRight"

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-baytBeige h-full w-screen">
+  <div class="bg-baytBeige h-full w-screen max-w-[450px]">
     <div
       class="grid grid-cols-2 gap-1 pt-10 px-6 max-w-screen-2xl h-full place-content-stretch"
     >

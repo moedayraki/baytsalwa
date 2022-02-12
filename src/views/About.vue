@@ -1,6 +1,8 @@
 <template>
-  <div class="background h-screen pt-10 absolute overflow-y-scroll w-screen">
-    <div class="logo-bg w-screen relative">
+  <div
+    class="background h-screen pt-10 absolute overflow-y-scroll overflow-x-hidden w-full max-w-[450px]"
+  >
+    <div class="logo-bg w-screen max-w-[450px] relative">
       <img
         src="../images/logo.jpeg"
         class="relative py-10 w-1/3 left-1/3 top-1/4"

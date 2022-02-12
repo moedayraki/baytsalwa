@@ -1,11 +1,11 @@
 <template>
   <div
     v-if="$route.path !== '/'"
-    :class="`fixed top-2 left-0 ${textColour} w-screen z-10`"
+    :class="`fixed top-2 ${textColour} z-10 w-full max-w-[450px] mx-auto`"
   >
     <span
       @click="$router.back()"
-      class="inline-block w-1/3 text-center text-xs"
+      class="inline-block w-1/3 text-center text-xs cursor-pointer"
     >
       Back</span
     >
@@ -16,7 +16,10 @@
       >عربي</router-link
     >
   </div>
-  <div v-else :class="`fixed top-2 left-0 ${textColour} w-screen z-10`">
+  <div
+    v-else
+    :class="`fixed top-2 ${textColour} w-full max-w-[450px] mx-auto z-10`"
+  >
     <router-link to="/" class="inline-block w-1/3 text-center text-xs"
       >&nbsp;</router-link
     >

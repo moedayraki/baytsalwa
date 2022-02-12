@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-screen h-full pt-12 bg-baytLightGreen absolute overflow-y-scroll"
+    class="w-screen h-full pt-12 bg-baytLightGreen absolute overflow-y-scroll max-w-[450px]"
   >
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13337.205083583605!2d35.4789851!3d33.3109384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x203989ecff56af5!2sBayt%20Salwa!5e0!3m2!1sen!2sca!4v1644371991681!5m2!1sen!2sca"
@@ -46,7 +46,9 @@
         CANCEL YOUR BOOKING
       </div>
     </div>
-    <div class="fixed flex items-stretch bottom-0 w-full justify-between">
+    <div
+      class="fixed flex items-stretch bottom-0 w-full justify-between max-w-[450px]"
+    >
       <div
         class="text-4xl bg-baytDarkestGreen text-left m-3 p-3 rounded-lg shadow-lg shadow-black border border-black text-baytLightGreen"
       >
