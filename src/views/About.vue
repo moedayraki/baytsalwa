@@ -8,7 +8,7 @@
     </div>
     <img
       src="../images/plant1.png"
-      class="absolute w-screen h-full opacity-30 -scale-y-100"
+      class="absolute w-screen h-full opacity-10 -scale-y-100"
     />
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl px-2 mt-4"
@@ -64,7 +64,7 @@
     <div class="bg-baytBeige pt-6 mt-20">
       <img
         src="../images/plant1.png"
-        class="absolute w-screen h-full opacity-30 -scale-x-100"
+        class="absolute w-screen h-full opacity-10 -scale-x-100"
       />
       <h2
         id="the-built"
@@ -96,7 +96,7 @@
     <div class="bg-baytBeige relative">
       <img
         src="../images/plant1.png"
-        class="absolute w-screen h-full opacity-30 -scale-y-100"
+        class="absolute w-screen h-full opacity-10 -scale-y-100"
       />
       <h2
         id="the-things"
