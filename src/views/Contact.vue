@@ -26,7 +26,8 @@
     </div>
     <div class="grid grid-cols-2 gap-4 mx-4 relative mb-20">
       <div
-        class="border-2 border-baytDarkestGreen text-baytDarkestGreen px-8 py-4 tracking-widest"
+        class="border-2 border-baytDarkestGreen text-baytDarkestGreen px-8 py-4 tracking-widest cursor-pointer"
+        @click="openModal"
       >
         CANT FIND A DATE TO BOOK?
       </div>
@@ -72,10 +73,163 @@
         </svg>
       </div>
     </div>
-    <!-- <div class="bg-baytDarkestGreen absolute p-3 rounded-xl bottom-0 m-3"></div>
-    <div
-      class="bg-baytDarkestGreen absolute p-3 rounded-xl bottom-0 m-3 right-0"
-    ></div> -->
+    <TransitionRoot appear :show="isOpen" as="template">
+      <Dialog as="div" @close="closeModal">
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+          <div class="min-h-screen px-4 text-center">
+            <TransitionChild
+              as="template"
+              enter="duration-300 ease-out"
+              enter-from="opacity-0"
+              enter-to="opacity-100"
+              leave="duration-200 ease-in"
+              leave-from="opacity-100"
+              leave-to="opacity-0"
+            >
+              <DialogOverlay class="fixed inset-0" />
+            </TransitionChild>
+
+            <span class="inline-block h-screen align-middle" aria-hidden="true">
+              &#8203;
+            </span>
+
+            <TransitionChild
+              as="template"
+              enter="duration-300 ease-out"
+              enter-from="opacity-0 scale-95"
+              enter-to="opacity-100 scale-100"
+              leave="duration-200 ease-in"
+              leave-from="opacity-100 scale-100"
+              leave-to="opacity-0 scale-95"
+            >
+              <div
+                class="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl"
+              >
+                <DialogTitle
+                  as="h3"
+                  class="text-lg font-medium leading-6 text-gray-900"
+                >
+                  Waitlist
+                </DialogTitle>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.Vestibulum quis porttitor dui. Donec eget ex
+                    euismod,efficitur nunc eu, consectetur nunc. Vestibulum ante
+                    ipsum primis in faucibus orci luctus etultrices posuere
+                    cubilia Curae; Donec eget ex euismod.
+                  </p>
+                  <div class="relative z-0 mb-6 mx-10 group">
+                    <input
+                      type="email"
+                      name="floating_email"
+                      class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      for="floating_email"
+                      class="absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >Booking Date</label
+                    >
+                  </div>
+                  <div class="relative z-0 mb-6 mx-10 group">
+                    <input
+                      type="email"
+                      name="floating_email"
+                      class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      for="floating_email"
+                      class="absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      ># of People</label
+                    >
+                  </div>
+                  <div class="relative z-0 mb-6 mx-10 group">
+                    <input
+                      type="email"
+                      name="floating_email"
+                      class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      for="floating_email"
+                      class="absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >Full Name</label
+                    >
+                  </div>
+                  <div class="relative z-0 mb-6 mx-10 group">
+                    <input
+                      type="email"
+                      name="floating_email"
+                      class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      for="floating_email"
+                      class="absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >Phone #</label
+                    >
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button
+                    type="button"
+                    class="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 mr-4"
+                    @click="closeModal"
+                  >
+                    Submit Request
+                  </button>
+                  <button
+                    type="button"
+                    class="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                    @click="closeModal"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </TransitionChild>
+          </div>
+        </div>
+      </Dialog>
+    </TransitionRoot>
   </div>
 </template>
-<script></script>
+<script>
+import { ref } from "vue";
+import {
+  TransitionRoot,
+  TransitionChild,
+  Dialog,
+  DialogOverlay,
+  DialogTitle,
+} from "@headlessui/vue";
+export default {
+  components: {
+    TransitionRoot,
+    TransitionChild,
+    Dialog,
+    DialogOverlay,
+    DialogTitle,
+  },
+  setup() {
+    const isOpen = ref(false);
+
+    return {
+      isOpen,
+      closeModal() {
+        isOpen.value = false;
+      },
+      openModal() {
+        isOpen.value = true;
+      },
+    };
+  },
+};
+</script>

@@ -2,7 +2,8 @@
 
 <template>
   <div class="max-w-[450px] mx-auto">
-    <main>
+    <loading-comp v-if="loading" v-on:end-loading="loading = false" />
+    <main v-else>
       <nav-bar />
       <router-view />
     </main>
@@ -23,3 +24,12 @@
     </a> -->
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      loading: true,
+    };
+  },
+};
+</script>

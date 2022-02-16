@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['gulim', ...defaultTheme.fontFamily.sans],
+        'gulim': ['gulim', ...defaultTheme.fontFamily.sans],
         'brush': ['comforter-brush', ...defaultTheme.fontFamily.sans],
         'bradhitc': ['bradhitc', ...defaultTheme.fontFamily.sans],
       },

@@ -15,33 +15,33 @@
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl px-2 mt-4"
     >
-      <a href="#the-name" class="bg-baytBeige p-2 rounded-md">❁ The Name</a>
+      <a href="#the-name" class="bg-baytBeige px-2 rounded-md">❁ The Name</a>
     </h2>
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl pt-1 px-2 mt-4"
     >
-      <a href="#the-built" class="bg-baytBeige p-2 rounded-md"
+      <a href="#the-built" class="bg-baytBeige px-2 rounded-md"
         >❃ How Was it Built?</a
       >
     </h2>
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-activities" class="bg-baytBeige p-2 rounded-md"
+      <a href="#the-activities" class="bg-baytBeige px-2 rounded-md"
         >❊ Activities, Hikes, & Adventures</a
       >
     </h2>
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-things" class="bg-baytBeige p-2 rounded-md"
+      <a href="#the-things" class="bg-baytBeige px-2 rounded-md"
         >ꕤ Things We Have In-House</a
       >
     </h2>
     <h2
       class="font-brush text-baytDarkestGreen opacity-70 tracking-wider text-2xl relative pt-1 px-2 mt-4"
     >
-      <a href="#the-visit" class="bg-baytBeige p-2 rounded-md"
+      <a href="#the-visit" class="bg-baytBeige px-2 rounded-md"
         >✤ Plant Your Visit</a
       >
     </h2>

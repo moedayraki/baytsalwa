@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="background h-screen">
+  <div class="background h-screen font-gulim">
     <router-link to="/book">
       <div
         class="w-full h-1/4 border-b-2 border-baytLightGreen text-baytLightGreen text-2xl relative"
