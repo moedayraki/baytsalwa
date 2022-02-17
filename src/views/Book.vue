@@ -90,7 +90,7 @@
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
       <label
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        class="block mb-2 text-sm font-medium text-baytBeige"
         for="user_avatar"
         >Upload ID Photo</label
       >
@@ -112,7 +112,7 @@
     </div>
     <div class="text-center mb-20">
       <button
-        class="bg-baytLightGreen text-baytDarkestGreen font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-baytBeige hover:text-baytLightGreen"
+        class="bg-baytLightGreen text-baytDarkestGreen font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-baytBeige hover:text-baytLightGreen claymorph-btn"
         type="submit"
       >
         Book Now
@@ -307,6 +307,10 @@ export default {
     url("./../images/booking.jpg");
   background-size: cover;
   background-position: center;
+}
+.claymorph-btn {
+  box-shadow: 10px 10px 15px -3px #000000, inset 5px 4px 5px 0 #e6ede6,
+    inset -5px -4px 5px 0 #566654;
 }
 </style>
 <style>

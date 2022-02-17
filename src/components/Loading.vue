@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-[450px] mx-auto">
     <div class="flex justify-center h-screen">
-      <video autoplay loop muted>
+      <video autoplay loop muted playsinline>
         <source src="./../media/loading.mp4" type="video/mp4" />
       </video>
     </div>
@@ -10,13 +10,13 @@
       v-if="pageLanguage === ''"
     >
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200/60 text-cyan-700 px-4 py-2 rounded-md shadow-lg shadow-neutral-600 mr-1 cursor-pointer"
+        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn mr-1 cursor-pointer"
         @click="setUpPageLanguage('en')"
       >
         English
       </h1>
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200/60 text-cyan-700 px-4 py-2 rounded-md shadow-lg shadow-neutral-600 ml-1 cursor-pointer"
+        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn ml-1 cursor-pointer"
         @click="setUpPageLanguage('ar')"
       >
         عربي
@@ -160,7 +160,7 @@ export default {
       }, 3000);
       setTimeout(() => {
         this.$emit("end-loading", false);
-      }, 8000);
+      }, 6500);
     },
   },
 };
@@ -175,10 +175,10 @@ export default {
   animation: dash 3s linear forwards;
 }
 .fade-in {
-  animation: fadeIn 1s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
 }
 .fade-out {
-  animation: fadeOut 1s ease-out forwards;
+  animation: fadeOut 0.5s ease-out forwards;
 }
 @keyframes dash {
   to {
@@ -200,5 +200,14 @@ export default {
   to {
     opacity: 0;
   }
+}
+
+.claymorph-btn {
+  box-shadow: 10px 10px 15px -3px #525252, inset 5px 4px 5px 0 #ffffff,
+    inset -5px -4px 5px 0 #b8b5b5;
+}
+
+svg {
+  filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.6));
 }
 </style>
