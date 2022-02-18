@@ -1,7 +1,9 @@
 <template>
   <div class="bg-baytLightGreen absolute max-w-[450px]">
     <div class="relative slide mt-10">
-      <div class="carousel-inner relative overflow-hidden w-full">
+      <div
+        class="carousel-inner relative overflow-hidden w-full shadow-lg shadow-slate-700/60"
+      >
         <div
           v-for="(img, i) in images"
           :id="`slide-${i}`"

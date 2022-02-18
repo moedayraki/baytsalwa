@@ -9,40 +9,94 @@
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
+      class="shadow-md shadow-slate-700/60"
     ></iframe>
     <img
       src="./../images/cabin.png"
       alt="cabin"
-      class="absolute top-1/2 opacity-20"
+      class="absolute top-1/2 opacity-20 pointer-events-none"
     />
     <h2 class="text-2xl text-center p-4">
       Your best moments in the best cabin
     </h2>
     <div class="grid grid-cols-4 gap-2 text-center mb-5">
-      <div>facebook</div>
-      <div>instagram</div>
-      <div>share</div>
-      <div>email</div>
+      <a href="https://www.instagram.com/bayt_salwa/" class="ml-[25%]">
+        <svg
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          style="fill: #000000"
+        >
+          <path
+            d="M25,2C12.318,2,2,12.317,2,25s10.318,23,23,23c12.683,0,23-10.317,23-23S37.683,2,25,2z M32,16h-3.29 C26.772,16,26,16.455,26,17.806V21h6l-1,5h-5v13h-6V26h-3v-5h3v-2.774C20,14.001,21.686,11,26.581,11C29.203,11,32,12,32,12V16z"
+          ></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/bayt_salwa/" class="ml-[25%]">
+        <svg
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          style="fill: #000000"
+        >
+          <path
+            d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"
+          ></path>
+        </svg>
+      </a>
+      <div class="ml-[25%]">
+        <svg
+          @click="shareMe"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 30 30"
+          style="fill: #000000"
+        >
+          <path
+            d="M 23 3 A 4 4 0 0 0 19 7 A 4 4 0 0 0 19.09375 7.8359375 L 10.011719 12.376953 A 4 4 0 0 0 7 11 A 4 4 0 0 0 3 15 A 4 4 0 0 0 7 19 A 4 4 0 0 0 10.013672 17.625 L 19.089844 22.164062 A 4 4 0 0 0 19 23 A 4 4 0 0 0 23 27 A 4 4 0 0 0 27 23 A 4 4 0 0 0 23 19 A 4 4 0 0 0 19.986328 20.375 L 10.910156 15.835938 A 4 4 0 0 0 11 15 A 4 4 0 0 0 10.90625 14.166016 L 19.988281 9.625 A 4 4 0 0 0 23 11 A 4 4 0 0 0 27 7 A 4 4 0 0 0 23 3 z"
+          ></path>
+        </svg>
+      </div>
+      <a href="mailto:moe@dayrakiarts.com?subject=BaytSalwa" class="ml-[25%]">
+        <svg
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          style="fill: #000000"
+        >
+          <path
+            d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 13 16 L 37 16 C 37.18 16 37.349766 16.020312 37.509766 16.070312 L 27.679688 25.890625 C 26.199688 27.370625 23.790547 27.370625 22.310547 25.890625 L 12.490234 16.070312 C 12.650234 16.020312 12.82 16 13 16 z M 11.070312 17.490234 L 18.589844 25 L 11.070312 32.509766 C 11.020312 32.349766 11 32.18 11 32 L 11 18 C 11 17.82 11.020312 17.650234 11.070312 17.490234 z M 38.929688 17.490234 C 38.979688 17.650234 39 17.82 39 18 L 39 32 C 39 32.18 38.979687 32.349766 38.929688 32.509766 L 31.400391 25 L 38.929688 17.490234 z M 20 26.410156 L 20.890625 27.310547 C 22.020625 28.440547 23.510234 29 24.990234 29 C 26.480234 29 27.959844 28.440547 29.089844 27.310547 L 29.990234 26.410156 L 37.509766 33.929688 C 37.349766 33.979688 37.18 34 37 34 L 13 34 C 12.82 34 12.650234 33.979687 12.490234 33.929688 L 20 26.410156 z"
+          ></path>
+        </svg>
+      </a>
     </div>
     <div class="grid grid-cols-2 gap-4 mx-4 relative mb-20">
       <div
-        class="border-2 border-baytDarkestGreen text-baytDarkestGreen px-8 py-4 tracking-widest cursor-pointer"
+        class="border-2 border-baytDarkestGreen text-baytDarkestGreen px-8 py-4 tracking-widest cursor-pointer shadow-lg shadow-slate-700/60"
         @click="openModal"
       >
         CANT FIND A DATE TO BOOK?
       </div>
       <div
-        class="bg-baytDarkestGreen p-4 text-baytLightGreen px-8 py-4 tracking-widest text-right"
+        class="bg-baytDarkestGreen p-4 text-baytLightGreen px-8 py-4 tracking-widest text-right shadow-lg shadow-slate-700/60"
       >
         REFER FAMILY OR FRIENDS
       </div>
       <div
-        class="bg-baytLightGreen p-4 text-baytDarkestGreen border-2 border-baytDarkestGreen px-8 py-4 tracking-widest"
+        class="bg-baytLightGreen p-4 text-baytDarkestGreen border-2 border-baytDarkestGreen px-8 py-4 tracking-widest shadow-lg shadow-slate-700/60"
       >
         DISCOVER MORE FROM US
       </div>
       <div
-        class="border-2 border-baytDarkestGreen p-4 text-baytDarkestGreen px-8 py-4 tracking-widest text-right"
+        class="border-2 border-baytDarkestGreen p-4 text-baytDarkestGreen px-8 py-4 tracking-widest text-right shadow-lg shadow-slate-700/60"
       >
         CANCEL YOUR BOOKING
       </div>
@@ -51,7 +105,7 @@
       class="fixed flex items-stretch bottom-0 w-full justify-between max-w-[450px]"
     >
       <div
-        class="text-4xl bg-baytDarkestGreen text-left m-3 p-3 rounded-lg shadow-lg shadow-black border border-black text-baytLightGreen"
+        class="text-4xl bg-baytDarkestGreen text-left m-3 p-3 rounded-lg shadow-lg shadow-slate-700/60 border border-black text-baytLightGreen"
       >
         <svg class="h-10 w-10 fill-baytLightGreen" viewBox="0 0 20 20">
           <path
@@ -60,7 +114,7 @@
         </svg>
       </div>
       <div
-        class="text-4xl bg-baytDarkestGreen text-right m-3 p-3 rounded-lg shadow-lg shadow-black border border-black text-baytLightGreen"
+        class="text-4xl bg-baytDarkestGreen text-right m-3 p-3 rounded-lg shadow-lg shadow-slate-700/60 border border-black text-baytLightGreen"
       >
         <svg
           class="h-10 w-10 fill-baytLightGreen"
@@ -230,6 +284,25 @@ export default {
         isOpen.value = true;
       },
     };
+  },
+  methods: {
+    shareMe() {
+      if (navigator.share) {
+        navigator
+          .share({
+            title: "WebShare API Demo",
+            url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
+          })
+          .then(() => {
+            console.log("Thanks for sharing!");
+          })
+          .catch(console.error);
+      } else {
+        alert(
+          "Your browser does not support the Web Share. Please copy link manually."
+        );
+      }
+    },
   },
 };
 </script>

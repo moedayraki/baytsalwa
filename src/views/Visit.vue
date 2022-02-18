@@ -1,8 +1,12 @@
 <template>
   <div class="bg-baytDarkestGreen">
     <div class="pt-10">
-      <div class="bg-1 h-60 flex justify-center items-center">
-        <div class="text-center text-4xl tracking-widest">What We Have</div>
+      <div
+        class="bg-1 h-60 flex justify-center items-center shadow-md shadow-slate-700/60"
+      >
+        <div class="text-center text-4xl tracking-widest">
+          Play By the Rules
+        </div>
       </div>
       <ul class="p-4">
         <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
@@ -12,7 +16,9 @@
       </ul>
     </div>
     <div class="mt-10">
-      <div class="bg-2 h-60 flex justify-center items-center">
+      <div
+        class="bg-2 h-60 flex justify-center items-center shadow-md shadow-slate-700/60"
+      >
         <div class="text-center text-4xl tracking-widest">What to Bring</div>
       </div>
       <ul class="p-4">
