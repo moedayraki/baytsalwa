@@ -25,12 +25,21 @@
   </div>
 </template>
 <script>
+import { setPageLocale } from "./util-frontend";
 export default {
   data() {
     return {
-      loading: true,
+      loading: "",
     };
   },
+  created() {
+    setPageLocale();
+  },
+  mounted() {
+    if (localStorage.locale) this.loading = false;
+    else this.loading = true;
+  },
+  computed: {},
 };
 </script>
 <style scoped>

@@ -5,21 +5,21 @@
         class="w-full h-1/4 border-b-2 border-baytLightGreen text-baytLightGreen text-2xl relative"
       >
         <div
-          :class="`border-b-2 border-baytLightGreen px-2 absolute w-fit left-1/4 bottom-4 tracking-widest first-letter:text-4xl ${fadeTop}`"
+          :class="`border-b-2 border-baytLightGreen px-2 absolute w-fit left-1/4 bottom-4 tracking-widest lrt:first-letter:text-4xl ${fadeTop}`"
         >
-          LET'S BOOK
+          {{ $t("lets book") }}
         </div>
       </div>
     </router-link>
     <div class="flex h-3/4">
       <router-link to="/about" class="w-2/5">
         <div
-          class="text-right h-full border-r-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
+          class="text-right h-full ltr:border-r-2 rtl:border-l-2 border-baytLightGreen ltr:pl-4 rtl:pr-4 pt-2 text-baytLightGreen text-2xl relative"
         >
           <div
-            :class="`border-r-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 right-4 tracking-widest first-letter:text-4xl ${fadeLeft}`"
+            :class="`ltr:border-r-2 rtl:border-l-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 right-4 tracking-widest lrt:first-letter:text-4xl ${fadeLeft}`"
           >
-            BAYT SALWA
+            {{ $t("bayt salwa") }}
           </div>
         </div>
       </router-link>
@@ -29,18 +29,18 @@
             class="h-1/3 border-b-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
           >
             <div
-              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/3 left-4 tracking-widest first-letter:text-4xl ${fadeRight}`"
+              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/3 left-4 tracking-widest lrt:first-letter:text-4xl ${fadeRight}`"
             >
-              GAL<br />LERY
+              {{ $t("gal") }}<br />{{ $t("lery") }}
             </div>
           </div>
         </router-link>
         <router-link to="/contact" class="">
           <div class="h-2/3 pl-4 pt-2 text-baytLightGreen text-2xl relative">
             <div
-              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/2 left-4 tracking-widest first-letter:text-4xl ${fadeBottom}`"
+              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/2 left-4 tracking-widest lrt:first-letter:text-4xl ${fadeBottom}`"
             >
-              REACH<br />US
+              {{ $t("reach") }}<br />{{ $t("us") }}
             </div>
           </div>
         </router-link>

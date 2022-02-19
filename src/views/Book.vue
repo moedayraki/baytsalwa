@@ -1,7 +1,7 @@
 <template>
   <div class="background h-screen pt-10 overflow-y-scroll">
     <div class="text-baytBeige text-2xl font-bold px-5 pb-2 text-center">
-      Select Date
+      {{ $t("select date") }}
     </div>
     <div class="text-center mb-10">
       <DatePicker
@@ -12,6 +12,7 @@
         is-range
         title-position="left"
         :rows="2"
+        :locale="language"
       />
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -27,7 +28,7 @@
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >Check In</label
+        >{{ $t("check in") }}</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -43,7 +44,7 @@
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >Check Out</label
+        >{{ $t("check out") }}</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -53,11 +54,12 @@
         class="block py-2.5 px-0 w-full text-sm text-baytBeige bg-transparent border-0 border-b-2 border-baytBeige appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
         placeholder=" "
         required
+        v-model="form.guests"
       />
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        ># of People</label
+        >{{ $t("# of people") }}</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -67,11 +69,12 @@
         class="block py-2.5 px-0 w-full text-sm text-baytBeige bg-transparent border-0 border-b-2 border-baytBeige appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
         placeholder=" "
         required
+        v-model="form.name"
       />
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >Full Name</label
+        >{{ $t("full name") }}</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
@@ -81,41 +84,43 @@
         class="block py-2.5 px-0 w-full text-sm text-baytBeige bg-transparent border-0 border-b-2 border-baytBeige appearance-none focus:outline-none focus:ring-0 focus:border-baytLightGreen peer"
         placeholder=" "
         required
+        v-model="form.phone"
       />
       <label
         for="floating_email"
         class="absolute text-sm text-baytBeige duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-baytLightGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >Phone #</label
+        >{{ $t("phone #") }}</label
       >
     </div>
     <div class="relative z-0 mb-6 mx-10 group">
       <label
         class="block mb-2 text-sm font-medium text-baytBeige"
         for="user_avatar"
-        >Upload ID Photo</label
+        >{{ $t("upload photo id") }}</label
       >
       <input
         class="block w-full text-sm text-gray-900 bg-baytSoil rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent"
         aria-describedby="user_avatar_help"
         id="user_avatar"
         type="file"
+        @change="onFileChange"
       />
       <div class="mt-1 text-xs text-baytLightGreen" id="user_avatar_help">
-        A proof of ID is useful to confirm legal information.
+        {{ $t("id explanation") }}
       </div>
     </div>
     <div
       class="text-center underline decoration-red-500 text-white decoration-2 mb-10"
       @click="openModal"
     >
-      Contract Agreement
+      {{ $t("contract agreement") }}
     </div>
     <div class="text-center mb-20">
       <button
         class="bg-baytLightGreen text-baytDarkestGreen font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-baytBeige hover:text-baytLightGreen claymorph-btn"
         type="submit"
       >
-        Book Now
+        {{ $t("book now") }}
       </button>
     </div>
   </div>
@@ -153,37 +158,56 @@
             >
               <DialogTitle
                 as="h3"
-                class="text-lg font-medium leading-6 text-gray-900"
+                class="text-lg font-medium leading-6 text-gray-900 ltr:text-left rtl:text-right"
               >
-                Contract Agreement
+                {{ $t("contract agreement") }}
               </DialogTitle>
-              <div class="mt-2">
+              <div class="mt-2 ltr:text-left rtl:text-right">
                 <p class="text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit.Vestibulum quis porttitor dui. Donec eget ex
-                  euismod,efficitur nunc eu, consectetur nunc. Vestibulum ante
-                  ipsum primis in faucibus orci luctus etultrices posuere
-                  cubilia Curae; Donec eget ex euismod.
+                  {{ $t("contract-1") }} {{ form.name }}
+                  <br />
+                  <br />
+                  {{ $t("contract-2") }} <br />
+                  {{ $t("contract-3") }} <br />
+                  {{ $t("contract-4") }} <br />
+                  {{ $t("contract-5") }} <br />
+                  <br />
+                  {{ $t("contract-6") }} {{ form.checkin }} <br />
+                  {{ $t("contract-7") }} {{ form.checkout }} <br />
+
+                  {{ $t("contract-8") }} <br />
+                  <br />
+                  {{ $t("contract-9") }} <br />
+                  <br />
+                  {{ $t("contract-10") }} <br />
+                  <br />
                 </p>
-                <li>Bla Bla Bla</li>
-                <li>Bla Bla Bla</li>
-                <li>Bla Bla Bla</li>
+                <li>{{ $t("contract-list-1") }}</li>
+                <li>{{ $t("contract-list-2") }}</li>
+                <li>
+                  {{ $t("contract-list-3") }}
+                </li>
+                <li>{{ $t("contract-list-4") }}</li>
+                <li>{{ $t("contract-list-5") }}</li>
+                <li>
+                  {{ $t("contract-list-6") }}
+                </li>
               </div>
 
               <div class="mt-4">
                 <button
                   type="button"
-                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 mr-4"
-                  @click="closeModal"
+                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 ltr:mr-4 rtl:ml-4"
+                  @click="acceptAgreement"
                 >
-                  Agree
+                  {{ $t("agree") }}
                 </button>
                 <button
                   type="button"
                   class="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                   @click="closeModal"
                 >
-                  Disagree
+                  {{ $t("disagree") }}
                 </button>
               </div>
             </div>
@@ -236,6 +260,15 @@ export default {
     let year = today.getFullYear();
     let month = today.getMonth();
     return {
+      form: {
+        checkin: null,
+        checkout: null,
+        guests: null,
+        name: null,
+        phone: null,
+        image: null,
+        contract: null,
+      },
       today,
       nextMonth,
       dateAttributes: [
@@ -279,6 +312,7 @@ export default {
         0,
         0
       );
+      this.form.checkin = `${dayjs(d).format("ddd MMM DD, YYYY")} @ 4:00 PM`;
       return `${dayjs(d).format("ddd MMM DD, YYYY")} @ 4:00 PM`;
     },
     checkOut() {
@@ -292,7 +326,17 @@ export default {
         0,
         0
       );
+      this.form.checkout = `${dayjs(d).format("ddd MMM DD, YYYY")} @ 2:00 PM`;
       return `${dayjs(d).format("ddd MMM DD, YYYY")} @ 2:00 PM`;
+    },
+  },
+  methods: {
+    onFileChange(e) {
+      this.form.image = e.target.files[0];
+    },
+    acceptAgreement() {
+      this.form.contract = true;
+      this.closeModal();
     },
   },
 };

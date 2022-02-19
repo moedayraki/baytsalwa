@@ -10,13 +10,13 @@
       v-if="pageLanguage === ''"
     >
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn mr-1 cursor-pointer"
+        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn mr-1 rtl:ml-1 cursor-pointer"
         @click="setUpPageLanguage('en')"
       >
         English
       </h1>
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn ml-1 cursor-pointer"
+        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn ml-1 rtl:mr-1 cursor-pointer"
         @click="setUpPageLanguage('ar')"
       >
         عربي
@@ -152,7 +152,7 @@ export default {
     setUpPageLanguage(lang) {
       let that = this;
       this.pageLanguage = lang;
-      window.localStorage.setItem("lang", lang);
+      window.localStorage.setItem("locale", lang);
       this.fadeStatus = "fade-out";
       that.svgOne = "animate-me";
       setTimeout(() => {

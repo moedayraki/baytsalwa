@@ -7,14 +7,14 @@
       @click="$router.back()"
       class="inline-block w-1/3 text-center text-xs cursor-pointer"
     >
-      Back</span
+      {{ $t("back") }}</span
     >
     <router-link to="/" class="inline-block w-1/3 text-center text-xs">{{
       $route.name
     }}</router-link>
-    <router-link to="/" class="inline-block w-1/3 text-center text-xs"
-      >عربي</router-link
-    >
+    <div @click="toggleLang" class="inline-block w-1/3 text-center text-xs">
+      {{ $t("language change") }}
+    </div>
   </div>
   <div
     v-else
@@ -26,9 +26,9 @@
     <router-link to="/" class="inline-block w-1/3 text-center text-xs">
       &nbsp;
     </router-link>
-    <router-link to="/" class="inline-block w-1/3 text-center text-xs"
-      >عربي</router-link
-    >
+    <div @click="toggleLang" class="inline-block w-1/3 text-center text-xs">
+      {{ $t("language change") }}
+    </div>
   </div>
 </template>
 <script>
@@ -48,6 +48,15 @@ export default {
         return "text-white";
       }
       return "text-BaytDarkestGreen";
+    },
+  },
+  methods: {
+    toggleLang() {
+      if (this.language === "en") {
+        this.language = "ar";
+      } else {
+        this.language = "en";
+      }
     },
   },
 };
