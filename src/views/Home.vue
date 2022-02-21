@@ -17,7 +17,7 @@
           class="text-right h-full ltr:border-r-2 rtl:border-l-2 border-baytLightGreen ltr:pl-4 rtl:pr-4 pt-2 text-baytLightGreen text-2xl relative"
         >
           <div
-            :class="`ltr:border-r-2 rtl:border-l-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 right-4 tracking-widest lrt:first-letter:text-4xl ${fadeLeft}`"
+            :class="`ltr:border-r-2 rtl:border-l-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 ltr:right-4 rtl:left-4 tracking-widest lrt:first-letter:text-4xl ${fadeLeft}`"
           >
             {{ $t("bayt salwa") }}
           </div>
@@ -29,7 +29,7 @@
             class="h-1/3 border-b-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
           >
             <div
-              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/3 left-4 tracking-widest lrt:first-letter:text-4xl ${fadeRight}`"
+              :class="`ltr:border-l-2 rtl:border-r-2 border-baytLightGreen px-2 py-2 absolute top-1/3 ltr:left-4 rtl:right-4 tracking-widest lrt:first-letter:text-4xl ${fadeRight}`"
             >
               {{ $t("gal") }}<br />{{ $t("lery") }}
             </div>
@@ -38,7 +38,7 @@
         <router-link to="/contact" class="">
           <div class="h-2/3 pl-4 pt-2 text-baytLightGreen text-2xl relative">
             <div
-              :class="`border-l-2 border-baytLightGreen px-2 py-2 absolute top-1/2 left-4 tracking-widest lrt:first-letter:text-4xl ${fadeBottom}`"
+              :class="`ltr:border-l-2 rtl:border-r-2 border-baytLightGreen px-2 py-2 absolute top-1/2 ltr:left-4 rtl:right-4 tracking-widest lrt:first-letter:text-4xl ${fadeBottom}`"
             >
               {{ $t("reach") }}<br />{{ $t("us") }}
             </div>

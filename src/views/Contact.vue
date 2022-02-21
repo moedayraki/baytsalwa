@@ -17,10 +17,14 @@
       class="absolute top-1/2 opacity-20 pointer-events-none"
     />
     <h2 class="text-2xl text-center p-4">
-      Your best moments in the best cabin
+      {{ $t("best-moment") }}
     </h2>
     <div class="grid grid-cols-4 gap-2 text-center mb-5">
-      <a href="https://www.instagram.com/bayt_salwa/" class="ml-[25%]">
+      <a
+        href="https://www.facebook.com/search/top?q=بيت%20سلوى"
+        target="_blank"
+        class="ltr:ml-[25%] rtl:mr-[25%]"
+      >
         <svg
           x="0px"
           y="0px"
@@ -34,7 +38,11 @@
           ></path>
         </svg>
       </a>
-      <a href="https://www.instagram.com/bayt_salwa/" class="ml-[25%]">
+      <a
+        href="https://www.instagram.com/bayt_salwa/"
+        target="_blank"
+        class="ltr:ml-[25%] rtl:mr-[25%]"
+      >
         <svg
           x="0px"
           y="0px"
@@ -48,7 +56,7 @@
           ></path>
         </svg>
       </a>
-      <div class="ml-[25%]">
+      <div class="ltr:ml-[25%] rtl:mr-[25%]">
         <svg
           @click="shareMe"
           x="0px"
@@ -63,7 +71,10 @@
           ></path>
         </svg>
       </div>
-      <a href="mailto:moe@dayrakiarts.com?subject=BaytSalwa" class="ml-[25%]">
+      <a
+        href="mailto:moe@dayrakiarts.com?subject=BaytSalwa"
+        class="ltr:ml-[25%] rtl:mr-[25%]"
+      >
         <svg
           x="0px"
           y="0px"
@@ -83,22 +94,22 @@
         class="border-2 border-baytDarkestGreen text-baytDarkestGreen px-8 py-4 tracking-widest cursor-pointer shadow-lg shadow-slate-700/60"
         @click="openModal"
       >
-        CANT FIND A DATE TO BOOK?
+        {{ $t("contact-1") }}
       </div>
       <div
         class="bg-baytDarkestGreen p-4 text-baytLightGreen px-8 py-4 tracking-widest text-right shadow-lg shadow-slate-700/60"
       >
-        REFER FAMILY OR FRIENDS
+        {{ $t("contact-2") }}
       </div>
       <div
         class="bg-baytLightGreen p-4 text-baytDarkestGreen border-2 border-baytDarkestGreen px-8 py-4 tracking-widest shadow-lg shadow-slate-700/60"
       >
-        DISCOVER MORE FROM US
+        {{ $t("contact-3") }}
       </div>
       <div
         class="border-2 border-baytDarkestGreen p-4 text-baytDarkestGreen px-8 py-4 tracking-widest text-right shadow-lg shadow-slate-700/60"
       >
-        CANCEL YOUR BOOKING
+        {{ $t("contact-4") }}
       </div>
     </div>
     <div
