@@ -193,12 +193,17 @@
                   <li>
                     {{ $t("contract-list-6") }}
                   </li>
+                  <li>
+                    {{ $t("contract-list-7") }}
+                  </li>
+                  <li>
+                    {{ $t("contract-list-8") }}
+                  </li>
                 </ul>
                 <div class="mt-5 text-sm">
                   <input
                     type="checkbox"
                     class="w-6 h-6 text-green-600 border-0 rounded-md focus:ring-0"
-                    checked
                   />
                   <span class="ml-2">{{ $t("terms") }}</span>
                 </div>

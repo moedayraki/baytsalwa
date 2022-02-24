@@ -100,12 +100,22 @@
         ꧂ {{ $t("the things") }}
       </h2>
       <ul class="p-2 text-baytDarkestGreen font-bradhitc">
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
-        <li class="pb-2">⁍ lirum epicus lorem ipsum dolor sit amet.</li>
+        <li class="pb-2">⁍ {{ $t("we-have-1") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-2") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-3") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-4") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-5") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-6") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-7") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-8") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-9") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-10") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-11") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-12") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-13") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-14") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-15") }}</li>
+        <li class="pb-2">⁍ {{ $t("we-have-16") }}</li>
       </ul>
       <button
         id="the-visit"

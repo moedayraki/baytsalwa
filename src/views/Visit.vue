@@ -9,10 +9,26 @@
         </div>
       </div>
       <ul class="p-4">
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
+        <li class="pb-2">❁{{ $t("contract-list-1") }}</li>
+        <li class="pb-2">❁{{ $t("contract-list-2") }}</li>
+        <li class="pb-2">
+          ❁
+          {{ $t("contract-list-3") }}
+        </li>
+        <li class="pb-2">❁{{ $t("contract-list-4") }}</li>
+        <li class="pb-2">❁{{ $t("contract-list-5") }}</li>
+        <li class="pb-2">
+          ❁
+          {{ $t("contract-list-6") }}
+        </li>
+        <li class="pb-2">
+          ❁
+          {{ $t("contract-list-7") }}
+        </li>
+        <li>
+          ❁
+          {{ $t("contract-list-8") }}
+        </li>
       </ul>
     </div>
     <div class="mt-10">
@@ -22,10 +38,20 @@
         <div class="text-center text-4xl tracking-widest">What to Bring</div>
       </div>
       <ul class="p-4">
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
-        <li>❁ lorem ipsem dolor sit amet, consectetur adipiscing elit.</li>
+        <li class="pb-2">❁ {{ $t("you-bring-1") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-2") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-3") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-4") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-5") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-6") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-7") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-8") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-9") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-10") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-11") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-12") }}</li>
+        <li class="pb-2">❁ {{ $t("you-bring-13") }}</li>
+        <li>❁ {{ $t("you-bring-14") }}</li>
       </ul>
     </div>
   </div>
