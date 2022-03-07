@@ -7,7 +7,6 @@
         v-for="img in gridArray()"
         :key="img.id"
         class="flex max-h-40 lg:max-h-96"
-        :class="img.rs"
       >
         <img
           :src="img.src"
@@ -20,73 +19,23 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "Gallery",
   data() {
     return {
-      images: [
-        {
-          id: 1,
-          src: "https://picsum.photos/id/237/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 2,
-          src: "https://picsum.photos/id/238/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 3,
-          src: "https://picsum.photos/id/239/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 4,
-          src: "https://picsum.photos/id/240/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 5,
-          src: "https://picsum.photos/id/241/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 6,
-          src: "https://picsum.photos/id/242/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 7,
-          src: "https://picsum.photos/id/243/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 8,
-          src: "https://picsum.photos/id/244/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 9,
-          src: "https://picsum.photos/id/1/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 10,
-          src: "https://picsum.photos/id/250/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 11,
-          src: "https://picsum.photos/id/247/1024/800",
-          rs: "lg:max-h-96",
-        },
-        {
-          id: 12,
-          src: "https://picsum.photos/id/248/1024/800",
-          rs: "lg:max-h-96",
-        },
-      ],
+      images: [],
     };
+  },
+  mounted() {
+    let that = this;
+    axios
+      .get(
+        "https://graph.instagram.com/me/media?fields=media_url&access_token=IGQVJVQkI4RnlyN2xiNngxaE9XQ3ZA6M0Q5bmV4M3ZAkbjh5d1ROUmY0ZA3JwMXBJQXFjNUVnVXhBSlNYNzFCRFpQbWhBTWYtQnE2WlNBa2tLMnFCWV81OHZAyZAXdNdGZA0Ylg3ZAGltNUpB"
+      )
+      .then((response) => {
+        that.images = response.data.data;
+      });
   },
   methods: {
     gridArray: function () {
@@ -115,7 +64,7 @@ export default {
         var result = "col-span-" + rand.toString(); //create the css class string
         grArray[i] = {
           id: this.images[i].id,
-          src: this.images[i].src,
+          src: this.images[i].media_url,
           rs: result,
         };
       }
