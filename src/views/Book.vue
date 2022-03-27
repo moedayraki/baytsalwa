@@ -110,7 +110,7 @@
       </div>
     </div>
     <div
-      class="text-center underline decoration-red-500 text-white decoration-2 mb-10"
+      class="text-center underline decoration-red-500 text-white decoration-2 mb-10 cursor-pointer"
       @click="openModal"
     >
       {{ $t("contract agreement") }}
@@ -119,6 +119,7 @@
       <button
         class="bg-baytLightGreen text-baytDarkestGreen font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-baytBeige hover:text-baytLightGreen claymorph-btn"
         type="submit"
+        @click="bookNow"
       >
         {{ $t("book now") }}
       </button>
@@ -234,6 +235,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import { DatePicker } from "v-calendar";
 import dayjs from "dayjs";
 import "v-calendar/dist/style.css";
@@ -257,7 +259,6 @@ export default {
   },
   setup() {
     const isOpen = ref(false);
-
     return {
       isOpen,
       closeModal() {
@@ -282,38 +283,19 @@ export default {
         name: null,
         phone: null,
         image: null,
-        contract: null,
+        contract: 0,
       },
       today,
       nextMonth,
-      dateAttributes: [
-        {
-          highlight: {
-            color: "red",
-            fillMode: "solid",
-          },
-          dates: new Date(year, month, 26),
-        },
-        {
-          highlight: {
-            color: "red",
-            fillMode: "solid",
-          },
-          dates: new Date(year, month, 27),
-        },
-        {
-          highlight: {
-            color: "red",
-            fillMode: "solid",
-          },
-          dates: new Date(year, month, 12),
-        },
-      ],
+      dateAttributes: [],
       range: {
         start: null,
         end: null,
       },
     };
+  },
+  created() {
+    this.getBookings();
   },
   computed: {
     checkIn() {
@@ -350,8 +332,63 @@ export default {
       this.form.image = e.target.files[0];
     },
     acceptAgreement() {
-      this.form.contract = true;
+      this.form.contract = 1;
       this.closeModal();
+    },
+    bookNow() {
+      let formData = new FormData();
+      let checkin = new Date(this.form.checkin).toUTCString();
+      let checkout = new Date(this.form.checkout).toUTCString();
+      formData.append("checkin", checkin);
+      formData.append("checkout", checkout);
+      formData.append("guests", this.form.guests);
+      formData.append("name", this.form.name);
+      formData.append("phone", this.form.phone);
+      formData.append("agreement", this.form.contract);
+      formData.append("image", this.form.image);
+
+      axios
+        .post("https://api.baytsalwa.dayrakiarts.com/api/book", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((res) => {
+          alert("Booking Successful!");
+          this.dateAttributes = [];
+          (this.form.checkin = null),
+            (this.form.checkout = null),
+            (this.form.guests = null),
+            (this.form.name = null),
+            (this.form.phone = null),
+            (this.form.image = null),
+            (this.form.contract = 0),
+            (this.range.start = null),
+            (this.range.end = null);
+          this.getBookings();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getBookings() {
+      axios
+        .get("https://api.baytsalwa.dayrakiarts.com/api/book")
+        .then((res) => {
+          res.data.forEach((item) => {
+            let d = new Date(item.check_out);
+            this.dateAttributes.push({
+              highlight: {
+                color: "red",
+                fillMode: "solid",
+              },
+              dates: {
+                start: new Date(item.check_in),
+                end: new Date(item.check_out).setDate(d.getDate() - 1),
+              },
+            });
+          });
+        });
     },
   },
 };
