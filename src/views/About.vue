@@ -56,7 +56,7 @@
       >
         ꧂ {{ $t("the name") }}
       </h2>
-      <p class="p-2 text-baytBeige font-bradhitc">
+      <p class="p-2 text-baytBeige">
         {{ $t("the name description") }}
       </p>
     </div>
@@ -71,7 +71,7 @@
       >
         {{ $t("the built") }} ꧁
       </h2>
-      <p class="p-2 text-baytDarkestGreen font-bradhitc">
+      <p class="p-2 text-baytDarkestGreen">
         {{ $t("the built description") }}
       </p>
       <button
@@ -99,7 +99,7 @@
       >
         ꧂ {{ $t("the things") }}
       </h2>
-      <ul class="p-2 text-baytDarkestGreen font-bradhitc">
+      <ul class="p-2 text-baytDarkestGreen">
         <li class="pb-2">⁍ {{ $t("we-have-1") }}</li>
         <li class="pb-2">⁍ {{ $t("we-have-2") }}</li>
         <li class="pb-2">⁍ {{ $t("we-have-3") }}</li>

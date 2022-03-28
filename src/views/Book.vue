@@ -368,7 +368,11 @@ export default {
           this.getBookings();
         })
         .catch((err) => {
-          console.log(err);
+          let errors = "";
+          for (let key in err.response.data.errors) {
+            errors += err.response.data.errors[key] + "\n";
+          }
+          alert(errors);
         });
     },
     getBookings() {
