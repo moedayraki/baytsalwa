@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "dayjs": "^1.11.1",
     "flowbite": "^1.4.2",
     "timezones-list": "^3.0.1",
