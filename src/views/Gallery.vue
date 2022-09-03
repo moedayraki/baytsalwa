@@ -1,22 +1,7 @@
 <template>
-  <div class="bg-baytBeige h-full w-screen max-w-[450px]">
-    <div
-      class="grid grid-cols-2 gap-1 pt-10 px-6 max-w-screen-2xl h-full place-content-stretch"
-    >
-      <div
-        v-for="img in gridArray()"
-        :key="img.id"
-        class="flex max-h-40 lg:max-h-96"
-      >
-        <img
-          :src="img.src"
-          :key="img.id"
-          alt=""
-          class="object-cover rounded-md"
-        />
-      </div>
-    </div>
-  </div>
+  <div
+    class="elfsight-app-9b700a63-b4c5-4ec9-b439-5e77e806b897 max-w-[450px] mx-auto"
+  ></div>
 </template>
 <script>
 import axios from "axios";

@@ -1,51 +1,14 @@
 <template>
-  <div class="background h-screen font-gulim">
-    <router-link to="/book">
-      <div
-        class="w-full h-1/4 border-b-2 border-baytLightGreen text-baytLightGreen text-2xl relative"
-      >
-        <div
-          :class="`border-b-2 border-baytLightGreen px-2 absolute w-fit left-1/4 bottom-4 tracking-widest lrt:first-letter:text-4xl ${fadeTop}`"
-        >
-          {{ $t("lets book") }}
-        </div>
+  <div class="background h-screen">
+    <h2 class="pl-2">
+      Welcome to where you find your
+      <div class="mask">
+        <span data-show>escape.</span>
+        <span>peace.</span>
+        <span>nature.</span>
+        <span>self.</span>
       </div>
-    </router-link>
-    <div class="flex h-3/4">
-      <router-link to="/about" class="w-2/5">
-        <div
-          class="text-right h-full ltr:border-r-2 rtl:border-l-2 border-baytLightGreen ltr:pl-4 rtl:pr-4 pt-2 text-baytLightGreen text-2xl relative"
-        >
-          <div
-            :class="`ltr:border-r-2 rtl:border-l-2 border-baytLightGreen px-2 h-fit py-2 absolute inset-y-52 ltr:right-4 rtl:left-4 tracking-widest lrt:first-letter:text-4xl ${fadeLeft}`"
-          >
-            {{ $t("bayt salwa") }}
-          </div>
-        </div>
-      </router-link>
-      <div class="w-3/5">
-        <router-link to="/gallery" class="">
-          <div
-            class="h-1/3 border-b-2 border-baytLightGreen pl-4 pt-2 text-baytLightGreen text-2xl relative"
-          >
-            <div
-              :class="`ltr:border-l-2 rtl:border-r-2 border-baytLightGreen px-2 py-2 absolute top-1/3 ltr:left-4 rtl:right-4 tracking-widest lrt:first-letter:text-4xl ${fadeRight}`"
-            >
-              {{ $t("gal") }}<br />{{ $t("lery") }}
-            </div>
-          </div>
-        </router-link>
-        <router-link to="/contact" class="">
-          <div class="h-2/3 pl-4 pt-2 text-baytLightGreen text-2xl relative">
-            <div
-              :class="`ltr:border-l-2 rtl:border-r-2 border-baytLightGreen px-2 py-2 absolute top-1/2 ltr:left-4 rtl:right-4 tracking-widest lrt:first-letter:text-4xl ${fadeBottom}`"
-            >
-              {{ $t("reach") }}<br />{{ $t("us") }}
-            </div>
-          </div>
-        </router-link>
-      </div>
-    </div>
+    </h2>
   </div>
 </template>
 <script>
@@ -67,16 +30,36 @@ export default {
       that.fadeLeft = "fade-left";
       that.fadeRight = "fade-right";
       that.fadeBottom = "fade-bottom";
+
+      setInterval(function () {
+        var show = document.querySelector("span[data-show]");
+        var next =
+          show.nextElementSibling || document.querySelector("span:first-child");
+        var up = document.querySelector("span[data-up]");
+
+        if (up) {
+          up.removeAttribute("data-up");
+        }
+
+        show.removeAttribute("data-show");
+        show.setAttribute("data-up", "");
+
+        next.setAttribute("data-show", "");
+      }, 2000);
     });
   },
 };
 </script>
 <style scoped>
 .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-image: radial-gradient(
       50% 103%,
-      rgba(25, 40, 43, 0.74) 50%,
-      rgba(0, 0, 0, 0.87) 100%
+      rgba(0, 0, 0, 0.7) 100%,
+      rgba(0, 0, 0, 0.7) 100%
     ),
     url("./../images/home.jpg");
   background-size: cover;
@@ -140,5 +123,61 @@ export default {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+h2 {
+  width: 980px;
+  font-size: 100px;
+  font-family: Helvetica;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.mask {
+  height: 106px;
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--offset);
+}
+
+.mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100px;
+  padding-bottom: var(--offset);
+
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.mask span[data-show] {
+  transform: translateY(-100%);
+  transition: 0.5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+  transform: translateY(-200%);
+  transition: 0.5s transform ease-in-out;
+}
+
+.mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+
+.mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+
+.mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+
+.mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
 }
 </style>

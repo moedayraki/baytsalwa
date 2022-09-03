@@ -6,17 +6,21 @@
       </video>
     </div>
     <div
-      :class="`absolute top-1/2 max-w-[450px] w-screen flex justify-between px-10 ${fadeStatus}`"
+      :class="`absolute top-0 h-screen max-w-[450px] w-screen  flex flex-col items-center justify-between px-10 ${fadeStatus}`"
       v-if="pageLanguage === ''"
     >
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn mr-1 rtl:ml-1 cursor-pointer"
+        class="text-9xl text-white cursor-pointer pt-[30%]"
         @click="setUpPageLanguage('en')"
       >
         English
       </h1>
+      <img
+        class="rounded-full opacity-80"
+        src="/favicon/android-chrome-144x144.png"
+      />
       <h1
-        class="basis-1/2 text-center text-4xl bg-neutral-200 text-cyan-700 px-4 py-2 rounded-xl claymorph-btn ml-1 rtl:mr-1 cursor-pointer"
+        class="text-9xl text-white cursor-pointer pb-[40%]"
         @click="setUpPageLanguage('ar')"
       >
         عربي
