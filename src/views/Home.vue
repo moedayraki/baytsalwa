@@ -1,6 +1,6 @@
 <template>
   <div class="background h-screen">
-    <h2 class="pl-2">
+    <h2 class="pl-5">
       Welcome to where you find your
       <div class="mask">
         <span data-show>escape.</span>
@@ -125,9 +125,17 @@ export default {
   }
 }
 
+:root {
+  --offset: 15px;
+}
+
+.hacked {
+  font-size: 4rem;
+}
+
 h2 {
   width: 980px;
-  font-size: 100px;
+  font-size: 80px;
   font-family: Helvetica;
   line-height: 1.06;
   letter-spacing: -0.02em;
@@ -135,7 +143,7 @@ h2 {
 }
 
 .mask {
-  height: 106px;
+  height: 86px;
   position: relative;
   overflow: hidden;
   margin-top: var(--offset);
@@ -145,7 +153,7 @@ h2 {
   display: block;
   box-sizing: border-box;
   position: absolute;
-  top: 100px;
+  top: 80px;
   padding-bottom: var(--offset);
 
   background-size: 100% 100%;
