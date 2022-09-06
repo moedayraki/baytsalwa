@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "dayjs": "^1.11.5",
-    "flowbite": "^1.5.2",
+    "flowbite": "^1.5.3",
     "timezones-list": "^3.0.1",
     "v-calendar": "^3.0.0-alpha.8",
     "vue": "^3.2.37",
