@@ -21,7 +21,7 @@
     "@headlessui/vue": "^1.7.14",
     "@heroicons/vue": "^2.0.16",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/forms": "^0.5.5",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "@types/tailwindcss": "^3.1.0",
