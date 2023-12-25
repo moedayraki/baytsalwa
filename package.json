@@ -12,7 +12,7 @@
     "flowbite": "^2.2.0",
     "timezones-list": "^3.0.2",
     "v-calendar": "^3.1.2",
-    "vue": "^3.3.8",
+    "vue": "^3.3.13",
     "vue-i18n": "^9.7.1",
     "vue-router": "^4.2.5",
     "vue3-parallax": "^0.1.4"
